@@ -1,14 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
   <meta charset="UTF-8">
   <title>Angular Data</title>
+  <meta name='viewport' content="width=display-width, user-scalable=no"></meta> <!--tag for mobile devices -->
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="js/lib/angular/angular-route.min.js"></script>
+  <script type="text/javascript" src="js/lib/angular/angular-animate.min.js"></script>
+  
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+  <!-- Firebase Simple login 
+  <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>-->
+
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/services/authentication.js"></script>
+  <script type="text/javascript" src="js/controllers/registration.js"></script>
+  <script type="text/javascript" src="js/controllers/meetings.js"></script>
 </head>
 <body>
+<header>
+	<nav class="cf" ng-include="'views/nav.html'"></nav>
+</header>
 <div class="page">
-  <main class="cf">
-  </main>
+  <main class="cf" ng-view></main>
 </div>
 </body>
 </html>
